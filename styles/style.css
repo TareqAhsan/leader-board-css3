@@ -11,6 +11,7 @@ body {
   width: 870px;
   background-color: #ffffff;
   padding: 30px;
+  margin-top: 20px;
 }
 
 .section-title {
@@ -21,10 +22,12 @@ body {
 main {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-hr{
-    border: 1px solid #D1D1D1;
-    margin-bottom :19px;
+hr {
+  border: 1px solid #d1d1d1;
+  margin-bottom: 19px;
 }
 
 /* Top player style */
@@ -45,36 +48,112 @@ hr{
 }
 .player-name {
   margin-left: 16px;
-  font-size: 18px ;
+  font-size: 18px;
 }
-
 
 /* styling top blog */
 
-.blogs{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-row-gap:26px;
+.blogs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 26px;
 }
 
-.blog{
-    display: flex;
-    align-items: center;
+.blog {
+  display: flex;
+  align-items: center;
 }
-.blog-info{
-    margin-left: 16px;
+.blog-info {
+  margin-left: 16px;
 }
-.blog .thumbnail img{
-    width: 117px;
+.blog .thumbnail img {
+  width: 117px;
 }
-.blog .blog-title{
-    margin-bottom: 6px;
-    font-size: 20px;
+.blog .blog-title {
+  margin-bottom: 6px;
+  font-size: 20px;
 }
-.blog .author{
-    font-size: 16px;
-    margin-top: 0;
+.blog .author {
+  font-size: 16px;
+  margin-top: 0;
 }
-.author a{
-    text-decoration: none;
+.author a {
+  text-decoration: none;
+}
+
+/* style lstest course */
+
+.courses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 10px;
+}
+
+.course {
+  box-shadow: 0px 5.34229px 13.3557px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  padding: 20px;
+}
+.course-banner img {
+  width: 224px;
+  height: 104px;
+}
+.course-title {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.course-author {
+  font-size: 14.6913px;
+  color: #ed6b4f;
+  margin-top: 7.17px;
+}
+
+.course-info {
+  display: flex;
+  margin-top: 0;
+}
+
+.course-rating .fill {
+  color: #ffc014;
+}
+.course-rating .empty {
+  color: #aeaeae;
+}
+
+.course-point {
+  margin-left: 9px;
+}
+.course-duration {
+  margin-left: 14px;
+  background: #ed6c4f70;
+
+  border-radius: 30px;
+  color: hsl(353, 100%, 65%);
+}
+
+@media only screen and (max-width: 668px) {
+  .container {
+    width: 100%;
+  }
+  .player,
+  .blog,
+  .course {
+    flex-direction: column;
+  }
+  .players,
+  .blogs,
+  .courses {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media only screen and (min-width: 668px) and (max-width: 992px) {
+  .container {
+    width: 100%;
+  }
+  .players,
+  .blogs,
+  .courses {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
